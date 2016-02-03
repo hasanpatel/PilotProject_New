@@ -34,12 +34,12 @@ public class CustomerDaoImpl implements CustomerDao {
 		} catch (Exception e) {
 			throw new SQLException(e);
 		} finally {
-			connection.close();
+			
 		}
 	}
 
 	@Override
-	public ArrayList<Customer> getCustomerInfo() {
+	public ArrayList<Customer> getCustomerInfo() throws SQLException {
 		try {
 			getConnection();
 			String sql = "select * from customer";
@@ -58,11 +58,11 @@ public class CustomerDaoImpl implements CustomerDao {
 			}
 			return customer;
 		} catch (SQLException ee) {
-
+				throw ee;
 		} finally {
 
 		}
-		return null;
+		
 	}
 
 	private void getConnection() {

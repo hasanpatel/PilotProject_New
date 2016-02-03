@@ -1,5 +1,6 @@
 package com.services;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.appCtx.ApplicationContextHolder;
@@ -21,7 +22,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public ArrayList<Customer> getCustmerDetails() {
+	public ArrayList<Customer> getCustmerDetails()throws SQLException {
 		// TODO Auto-generated method stub
 		return new CustomerDaoImpl().getCustomerInfo();
 	}
