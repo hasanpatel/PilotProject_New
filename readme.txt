@@ -8,6 +8,7 @@ Unzip the ".war" and copy all file from "Webcontent/WEBINF/lib" to "Webcontent/W
 please run the sql script file from "DBScripts" folder.
 
 DB crediationals 
+DB used : mysql
 user : root
 pwd :""
 
